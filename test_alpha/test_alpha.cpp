@@ -33,7 +33,7 @@ int main(int argc, char** argv)
   }
 
   pcl::visualization::PCLVisualizer viewer;
-  viewer.setBackgroundColor (0.5, 0.5, 0.5);
+  viewer.setBackgroundColor (0.356, 0.356, 0.709);
   viewer.addPointCloud(cloud);
   viewer.setPointCloudRenderingProperties (pcl::visualization::PCL_VISUALIZER_POINT_SIZE, 20);
   pcl::io::savePLYFileASCII ("test_pcd.ply", *cloud);
