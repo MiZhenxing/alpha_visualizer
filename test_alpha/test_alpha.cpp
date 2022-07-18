@@ -1,8 +1,8 @@
-// https://github.com/PointCloudLibrary/pcl/issues/1055
-
 #include <iostream>
 #include <pcl/common/common.h>
 #include <pcl/visualization/pcl_visualizer.h>
+#include <pcl/io/pcd_io.h>
+#include <pcl/io/ply_io.h>
 
 /** @brief PCL point object */
 typedef pcl::PointXYZRGBA PointT;
@@ -33,10 +33,12 @@ int main(int argc, char** argv)
   }
 
   pcl::visualization::PCLVisualizer viewer;
+  viewer.setBackgroundColor (0.5, 0.5, 0.5);
   viewer.addPointCloud(cloud);
-
-  while (!viewer.wasStopped())
-    viewer.spinOnce();
+  viewer.setPointCloudRenderingProperties (pcl::visualization::PCL_VISUALIZER_POINT_SIZE, 20);
+  pcl::io::savePLYFileASCII ("test_pcd.ply", *cloud);
+  // while (!viewer.wasStopped())
+  viewer.spin();
 
   return 0;
 }
