@@ -14,6 +14,7 @@ int main(int argc, char** argv)
 {
   PointCloudT::Ptr cloud(new PointCloudT);
   pcl::io::loadPLYFile (argv[1], *cloud);
+  // pcl::io::loadPCDFile (argv[1], *cloud);
 
   pcl::visualization::PCLVisualizer viewer;
   // viewer.setBackgroundColor (1.0, 1.0, 1.0);
