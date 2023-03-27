@@ -1,1 +1,0 @@
-GIT_SSH_COMMAND="ssh -i ~/.ssh/ed25519_mi" git push
