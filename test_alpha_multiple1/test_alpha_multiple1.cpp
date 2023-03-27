@@ -7,7 +7,7 @@
 #include <string>
 
 /** @brief PCL point object */
-typedef pcl::PointXYZRGBA PointT;
+typedef pcl::PointXYZRGB PointT;
 
 /** @brief PCL Point cloud object */
 typedef pcl::PointCloud<PointT> PointCloudT;
@@ -28,8 +28,7 @@ int main(int argc, char** argv)
   // pcl::io::loadPCDFile (argv[1], *cloud);
 
   pcl::visualization::PCLVisualizer viewer;
-  // viewer.setBackgroundColor (1.0, 1.0, 1.0);
-  viewer.setBackgroundColor (0.5, 0.5, 1.0);
+  viewer.setBackgroundColor (1.0, 1.0, 1.0);
   // viewer.setBackgroundColor (0.356, 0.356, 0.709);
   for (int i = 0; i < cloud_num; i ++) {
     auto & cloud = clouds[i];
