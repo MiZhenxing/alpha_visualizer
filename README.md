@@ -19,7 +19,7 @@ If you get cmake warnings about VTK or Qt5, you can specify the Qt5 path in the 
 cmake -DQt5_DIR=/path/to/your/qt5/lib/cmake/Qt5 ..
 ```
 
-## visualizing
+## Visualizing
 Given several point clouds `file1.ply`, `file2.ply`, run following commands to visualize them together:
 
 ```sh
